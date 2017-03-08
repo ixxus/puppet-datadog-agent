@@ -25,11 +25,11 @@
 #  }
 #
 class datadog_agent::integrations::dns_check (
-  checks = [
+  $checks = [
     {
-        $hostname   = undef,
-        $nameserver = undef,
-        $timeout    = undef
+      'hostname'   => 'google.com',
+      'nameserver' => '8.8.8.8',
+      'timeout'    => 5,
     }
   ]
 ) inherits datadog_agent::params {
