@@ -26,10 +26,12 @@
 #
 class datadog_agent::integrations::dns_check (
   checks = [
-     $hostname   = undef,
-     $nameserver = undef,
-     $timeout    = undef,
-  ],
+    {
+        $hostname   = undef,
+        $nameserver = undef,
+        $timeout    = undef
+    }
+  ]
 ) inherits datadog_agent::params {
   include datadog_agent
 
